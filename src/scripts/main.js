@@ -30,8 +30,8 @@ function getEmployees(currList) {
     employeesList.push({
       name: item.textContent.trim(),
       position: item.dataset.position,
-      salary: item.dataset.salary,
-      age: item.dataset.age,
+      salary: convertToNumber(item.dataset.salary),
+      age: Number(item.dataset.age),
     }));
 
   return employeesList;
